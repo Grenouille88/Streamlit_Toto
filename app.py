@@ -5,4 +5,7 @@ st.title("My Dsh")
 
 df=pd.read_csv("CMF.csv")
 
-st.write(df)
+if st.checkbox("Afficher le jeu de données"):
+  st.write(df)
+
+st.selectbox("Selectionnez une profession",[1,2,3,4])
