@@ -8,5 +8,5 @@ df=pd.read_csv("CMF.csv")
 if st.checkbox("Afficher le jeu de données"):
   st.write(df)
 
-matricule=df.employee_id.unique()
+matricule=df.EMPLOYEE_ID.unique()
 st.selectbox("Selectionnez votre matricule",matricule)
