@@ -44,7 +44,7 @@ if uploaded_file is not None:
     #sns.histplot(dataframe.[var])
     
     sns.histplot(data=dataframe,           # Jeu de données
-             x={var},           # Variable sur l'axe X
+             x='LABEL_TZ',           # Variable sur l'axe X
              bins=12,           # Nombre de barres
              kde=True,          # Ajout de la courbe de densité
              color='Red'    # Couleur des barres
