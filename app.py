@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 st.title("My Dsh")
 
@@ -42,11 +43,13 @@ if uploaded_file is not None:
   
     var=st.selectbox("Selectionnez votre matricule",dataframe.columns)
     st.write(var)
-    sns.histplot(dataframe.LABEL_TZ)
+    ax.hist(dataframe['LABEL_TZ'], bins=20)
+    st.pyplot(fig)
+    #sns.histplot(dataframe.LABEL_TZ)
     
-    sns.histplot(data=dataframe,           # Jeu de données
-             x='LABEL_TZ',           # Variable sur l'axe X
-             bins=12,           # Nombre de barres
-             kde=True,          # Ajout de la courbe de densité
-             color='Red'    # Couleur des barres
-             )
+    #sns.histplot(data=dataframe,           # Jeu de données
+    #         x='LABEL_TZ',           # Variable sur l'axe X
+    #         bins=12,           # Nombre de barres
+    #         kde=True,          # Ajout de la courbe de densité
+    #         color='Red'    # Couleur des barres
+    #         )
