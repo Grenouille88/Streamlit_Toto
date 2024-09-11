@@ -43,6 +43,7 @@ if uploaded_file is not None:
   
     var=st.selectbox("Selectionnez votre matricule",dataframe.columns)
     st.write(var)
+    fig, ax = plt.subplots()
     ax.hist(dataframe['LABEL_TZ'], bins=20)
     st.pyplot(fig)
     #sns.histplot(dataframe.LABEL_TZ)
