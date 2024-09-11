@@ -42,7 +42,7 @@ if uploaded_file is not None:
   
     var=st.selectbox("Selectionnez votre matricule",dataframe.columns)
     st.write(var)
-    #sns.histplot(dataframe.[var])
+    sns.histplot(dataframe.LABEL_TZ)
     
     sns.histplot(data=dataframe,           # Jeu de données
              x='LABEL_TZ',           # Variable sur l'axe X
