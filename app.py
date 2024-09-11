@@ -41,6 +41,7 @@ if uploaded_file is not None:
     #st.write(dataframe)
   
     var=st.selectbox("Selectionnez votre matricule",dataframe.columns)
+    st.write(var)
     #sns.histplot(dataframe.[var])
     
     sns.histplot(data=dataframe,           # Jeu de données
