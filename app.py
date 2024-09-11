@@ -41,9 +41,4 @@ if uploaded_file is not None:
     #st.write(dataframe)
   
     var=st.selectbox("Selectionnez votre matricule",dataframe.columns)
-    plt.figure(figsize=(5,2))
     sns.histplot(dataframe.var)
-    plt.title('Histo toto')
-    plt.ylabel('Fréquence')
-    plt.xlabel('Work_Experience')
-    plt.show()
